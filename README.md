@@ -12,9 +12,10 @@ Mooncake Chinese is an web based single page application used for learning simpl
 
 Users can choose one of the following flashcard selection algorithms for their study session.
 
-- `new` new words only
-- `known` known words only
-- `equally_mixed` half new words and half known words
+- `type`
+  - `new` new words only
+  - `known` known words only
+  - `equally_mixed` half new words and half known words
 
 Study sessions also support the following parameters.
 
@@ -39,7 +40,9 @@ With any algorithm or set of parameters, users can decide if they want to submit
 
 2. $~/learn_chinese_app/vue> `npm install`
 
-3. Run `start_development.bat`
+3. You can download the vocabulary `.mp3s` from `https://github.com/skwzrd/mooncake/releases` and extract them to `~/audio/vocabulary`. These files were generated using the [Sound of Text](https://soundoftext.com/docs) API. See `/extract/` for the scripts associated with that.
+
+4. Run `start_development.bat`
 
 ## Production Mode 😊
 
@@ -50,4 +53,3 @@ With any algorithm or set of parameters, users can decide if they want to submit
 ## Other 💫
 
 - You will require a sqlite3.dll above version 3.24.0 so that `UPSERT` transactions are supported. You can download a new version from https://www.sqlite.org/download.html. Copy and replace it at path `C:/Users/<USERNAME>/AppData/Local/Programs/Python/Python<PYTHON_VERSION>/DLLs/sqlite3.dll`.
-- You can download the vocabulary `.mp3s` from `https://github.com/skwzrd/mooncake/releases` and extract them to `~/audio/vocabulary`. 
