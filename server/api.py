@@ -139,7 +139,6 @@ def get_study_session(
     hsk=default_hsk, study_session_type=default_study_session_type, size=default_size
 ):
     user_id = default_user_id
-
     if study_session_type == 'new':
         df = get_new_characters(user_id, hsk, size)
 
@@ -176,6 +175,7 @@ def get_study_session(
         df = pd.concat([df_known, df_new]).sample(frac=1)  # concat and shuffle df rows
     else:
         raise NotImplementedError(study_session_type)
+    print(df)
     return make_json(df)
 
 

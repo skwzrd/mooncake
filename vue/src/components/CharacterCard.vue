@@ -79,7 +79,7 @@ export default {
   },
   methods: {
     init(){
-      get_data(`${this.get_server_url()}/study_session?type=${this.$parent.study_type}&size=${this.$parent.size}&hsk=${this.$parent.hsk_level}`,
+      get_data(`${this.get_server_url()}/study_session?type=${this.$parent.study_type.toLowerCase().replace(' ', '_')}&size=${this.$parent.size}&hsk=${this.$parent.hsk_level}`,
         characters => {
           this.characters = characters;
           this.character_count = Object.keys(this.characters).length;

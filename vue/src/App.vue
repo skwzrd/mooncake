@@ -8,7 +8,6 @@
     </div>
     <div v-else class="main configs">
       <div>
-        <!-- <div>User id: <select class="btn"><option>1</option></select></div> -->
         <div>HSK: 
           <select v-model="hsk_level" class="btn">
             <option v-for="n in hsk_levels" :key="n" :value="n" class="btn">{{n}}</option>
@@ -48,7 +47,7 @@ export default {
       study_session_in_progress: false,
       hsk_levels: 6,
       hsk_level: 1,
-      study_types: ['New', 'Known', "Equally Mixed"],
+      study_types: ['New', 'Known', 'Equally Mixed'],
       study_type: 'Equally Mixed',
       size: 10,
       size_max: 20,
